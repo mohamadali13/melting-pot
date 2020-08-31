@@ -1,0 +1,161 @@
+.article {
+  display: block;
+  vertical-align: top;
+  margin: 0.5em;
+}
+
+.article_preview {
+  &_container {
+    position: relative;
+    border-radius: 0.75em;
+
+    &_image {
+      object-fit: cover;
+      width: 100%;
+      transition: transform 0.25s;
+      transform: scale(1);
+
+      &:hover {
+        transition: transform 0.25s;
+        transform: scale(1.1);
+      }
+    }
+
+    &_actions {
+      display: none;
+    }
+
+    &_source, &_unread, &_actions {
+      position: absolute;
+      border-radius: 0.5em;
+    }
+
+    &_source {
+      bottom: 0.75em;
+      left: 0.5em;
+      display: inline-block;
+      padding: 0.6em;
+      background-color: rgba(black, 0.75);
+
+      * {
+        color: white;
+      }
+    }
+
+    &_unread { // TODO: add this back
+      display: none;
+      top: 0.5em;
+      left: 0.5em;
+      padding: 0.5em;
+      background-color: rgba(blue, 0.75);
+    }
+
+    &_actions {
+      top: 0.5em;
+      right: 0.5em;
+    }
+  }
+
+  &_info {
+    width: 100%;
+
+    * {
+      color: black;
+    }
+
+    h3 {
+      line-height: 1.25em;
+    }
+
+    p {
+      line-height: 1.25em;
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    h3, p {
+      margin-top: 0.5em;
+      white-space: normal;
+    }
+  }
+
+}
+
+[preview-size="small"] {
+
+  .article_preview {
+    width: 17.5em;
+
+    &_container {
+      &_image {
+        // border-radius: 0.75em;
+        // transition: transform 0.25s;
+        // transform: scale(1);
+        height: 10em;
+      }
+
+      &_source, &_actions {
+        display: none;
+      }
+
+      &_actions {
+        top: 2.8em;
+      }
+    }
+
+    &_info p {
+      display: none;
+    }
+
+  &:hover .article_preview_container {
+    &_source {
+      display: inherit;
+    }
+
+    &_image {
+      // transition: transform 0.25s;
+      // transform: scale(1.1);
+      filter: blur(1px);
+    }
+
+    &_actions {
+      display: none; //TODO: set this to inherit
+      width: calc(100% - 1em);
+
+      button{
+        display: block;
+        width: 100%;
+
+        &:first-of-type {
+          margin-bottom: 0.5em;
+        }
+      }
+    }
+  }
+
+  }
+
+}
+
+[preview-size="large"] {
+
+  .article_preview {
+    width: 30em;
+
+    &_container_image {
+      height: 17.5em;
+    }
+
+  }
+
+}
+
+@media (prefers-color-scheme: dark) {
+
+  .article_preview {
+    h3, p {
+      color: white;
+    }
+  }
+
+}

@@ -1,0 +1,45 @@
+#content-view {
+  height: calc(100% - 4em);
+  width: 100%;
+  background-color: white;
+  overflow: auto;
+}
+
+.section-title {
+  font-size: 20pt;
+  padding: 0.5em;
+  padding-bottom: 0;
+}
+
+.section {
+  padding-left: 0.5em;
+  overflow-x: scroll;
+  white-space: nowrap;
+
+  &[type="horizontal"] {
+    // height: 28em;
+  }
+
+  &[type="horizontal"] .article {
+    display: inline-block;
+  }
+
+  &[type="grid"] {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+
+  #content-view {
+    background-color: #202020;
+  }
+
+  .section-title {
+    color: white;
+  }
+
+}

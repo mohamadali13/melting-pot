@@ -1,0 +1,88 @@
+.navigation-bar {
+  width: calc(100% - 2em);
+  padding: 1em;
+  background-color: lightGray;
+
+  &_default a {
+    margin: 0;
+  }
+
+  * {
+    vertical-align: middle;
+    display: inline;
+    margin-right: 5px;
+    outline: 0;
+  }
+
+  button {
+    border-radius: 0.25em;
+  }
+
+  &_dropdown {
+    z-index: 3;
+    margin-left: -1em;
+    position: absolute;
+    width: calc(100% - 14em);
+    display: flex;
+    flex-direction:column;
+    padding: 1em;
+    background-color: lightGray;
+
+    label {
+      font-size: 12pt;
+      width: 55%;
+      float: left;
+    }
+
+    &_filter {
+
+      margin-top: 0.25em;
+
+      input, select {
+        width: 30%;
+      }
+
+      input {
+        appearance: none;
+        border: none;
+        height: 1.75em;
+        float: right;
+        border-radius: 0.5em;
+      }
+
+      select {
+        height: 1.8em;
+        float: right;
+      }
+
+    }
+
+  }
+
+}
+
+@media (prefers-color-scheme: dark) {
+
+  .navigation-bar {
+    background-color: #383838;
+
+    button {
+      background-color: white;
+
+      span {
+        color: black;
+      }
+    }
+
+    &_dropdown {
+      background-color: #383838
+    }
+
+    label {
+      color: white;
+      padding: 0 0.5em;
+    }
+
+  }
+
+}
