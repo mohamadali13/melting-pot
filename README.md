@@ -27,5 +27,4 @@ Documentation of the newSAPI [here](https://newsapi.org/).
 - Anton Quietzsch
 - Michal Pizza
 - Jamine Müller
-- Stephanie Phunket
 
