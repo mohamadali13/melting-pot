@@ -22,7 +22,7 @@ Documentation of the newSAPI [here](https://newsapi.org/).
 
 ## **Members**
 
-- Mohammad Ali
+- Mohamad Ali
 - Nam Anh Nguyen
 - Anton Quietzsch
 - Michal Pizza
